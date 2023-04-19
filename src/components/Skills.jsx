@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { BsArrowRightCircle } from "react-icons/bs";
+
 import "../assets/css/skills.css";
 import WebDesign from "../assets/images/webdesign.png";
 import WebDev from "../assets/images/webdev.png";
@@ -20,15 +22,15 @@ function Skills() {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 2,
     },
   };
   return (
@@ -38,7 +40,9 @@ function Skills() {
           <Col>
             <div className="skill__box">
               <h2>Skills</h2>
-              <p>Below are the skills I have and can use.</p>
+              <p className="text-center">
+                Below are the skills I have and can use.
+              </p>
               <Carousel
                 responsive={responsive}
                 infinite={true}
@@ -73,7 +77,9 @@ function Skills() {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-left" src={""} alt="#" />
+      <a href="#" className="download-resume">
+        Download Resume <BsArrowRightCircle size={25} />
+      </a>
     </section>
   );
 }

@@ -1,7 +1,8 @@
 .skills {
-  height: 400px;
+  min-height: 400px;
   display: grid;
   place-items: center;
+  padding: 1rem 0;
 }
 
 .skills__container {
@@ -10,11 +11,9 @@
 }
 
 .skill__box {
-  background-color: var(--background-color);
+  /* background-color: var(--main-color); */
   border-radius: 64px;
   text-align: center;
-  padding: 64px 54px;
-  margin-top: -64px;
 }
 
 .skill__box h2 {
@@ -24,8 +23,14 @@
   font-family: var(--font-family);
 }
 
+.skill__box p {
+  color: var(--white-text);
+  line-height: 1.2;
+  font-size: clamp(0.8rem, 3vw, 1rem);
+}
+
 .skill__item {
-  background-color: var(--white-text);
+  background-color: var(--main-color);
   margin: 0 0.5rem;
   padding: 1rem 0;
   border-radius: 0.5rem;
@@ -39,6 +44,21 @@
 }
 
 .skill__item h5 {
-  color: var(--second-color);
+  color: var(--white-text);
   font-weight: 700;
+}
+
+.skills .download-resume {
+  background-color: var(--white-text);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.5s ease-in;
+}
+
+.skills .download-resume:hover {
+  background-color: var(--main-color);
+  color: var(--second-color);
 }

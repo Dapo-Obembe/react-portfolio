@@ -1,4 +1,4 @@
-import { React} from "react";
+import { React } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { BsArrowRightCircle } from "react-icons/bs";
 import heroImg from "../assets/images/my-image.jpeg";
@@ -12,7 +12,7 @@ function Banner() {
         <Container className="banner__container">
           <Row className="align-items-center banner__items ">
             <Col xs={12} md={6} xl={7}>
-              <span style={{ color: "#fff" }}>My Name Is</span>
+              <span style={{ color: "#fff" }}>I am</span>
               <h1 className="tagline">DAPO OBEMBE</h1>
               <h2>
                 <span className="wrap">
