@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Nav, Tab, TabPane } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import imgProject1 from "../assets/images/Edemy.png";
+import "../assets/css/projects.css";
 
 function Projects() {
   const projects = [
@@ -30,10 +31,15 @@ function Projects() {
       description: "Tutorial Website",
       imgUrl: imgProject1,
     },
+    {
+      title: "Synergy Int. Nursing Network",
+      description: "Tutorial Website",
+      imgUrl: imgProject1,
+    },
   ];
   return (
     <section className="projects" id="projects">
-      <Container>
+      <Container className="projects__container text-center">
         <Row>
           <Col>
             <h2>Projects</h2>
@@ -42,7 +48,7 @@ function Projects() {
               repellat minus ab nobis blanditiis
             </p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
-              <Nav variant="pills">
+              <Nav classNAme="projects__nav" variant="pills">
                 <Nav.Item>
                   <Nav.Link eventKey="first">WordPress</Nav.Link>
                 </Nav.Item>

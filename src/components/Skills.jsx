@@ -18,19 +18,19 @@ function Skills() {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 4,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 3,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 3,
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 2,
+      items: 1,
     },
   };
   return (
@@ -47,6 +47,7 @@ function Skills() {
                 responsive={responsive}
                 infinite={true}
                 className="skill__slider"
+                autoPlay={true}
               >
                 <div className="skill__item">
                   <img src={WebDesign} alt="" />
@@ -77,7 +78,7 @@ function Skills() {
           </Col>
         </Row>
       </Container>
-      <a href="#" className="download-resume">
+      <a href="#" className="download-resume text-center">
         Download Resume <BsArrowRightCircle size={25} />
       </a>
     </section>
