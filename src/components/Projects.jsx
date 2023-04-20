@@ -53,10 +53,10 @@ function Projects() {
                   <Nav.Link eventKey="first">WordPress</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Option 2</Nav.Link>
+                  <Nav.Link eventKey="second">UI/UX</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Video Creation</Nav.Link>
+                  <Nav.Link eventKey="third">React</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content>
