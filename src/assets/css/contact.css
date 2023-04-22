@@ -1,0 +1,84 @@
+.contact__section {
+  min-height: 600px;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__container {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.contact__container h2 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--white-text);
+  font-family: var(--font-family);
+}
+
+.contact__container form {
+  min-height: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  gap: 0.5rem;
+}
+
+form input,
+textarea {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+
+form textarea {
+  height: 300px;
+}
+
+form button {
+  width: 50%;
+  height: 50px;
+  /* background-color: var(--main-color);
+  color: var(--white-text); */
+  color: var(--white-text);
+  border: 1px solid var(--white-text);
+  background-color: transparent;
+  border: 1px solid var(--white-text);
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  font-size: clamp(1rem, 3vw, 1.5rem);
+
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+form button::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  background-color: var(--white-text);
+  border-radius: 0.5rem;
+
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+form button:hover {
+  color: var(--main-color);
+}
+
+form button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}

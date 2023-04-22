@@ -1,7 +1,7 @@
 import { React } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { BsArrowRightCircle } from "react-icons/bs";
-import heroImg from "../assets/images/my-image.jpeg";
+import heroImg from "../assets/images/Dapo.jpg";
 import "../assets/css/banner.css";
 import { TypeAnimation } from "react-type-animation";
 
@@ -44,7 +44,11 @@ function Banner() {
               </button>
             </Col>
             <Col xs={12} md={6} xl={5} className="banner__col2">
-              <img src={heroImg} alt="hero image" className="hero-image" />
+              <img
+                src={heroImg}
+                alt="hero image"
+                className="hero-image img-fluid"
+              />
             </Col>
           </Row>
         </Container>
