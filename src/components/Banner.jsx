@@ -10,8 +10,8 @@ function Banner() {
     <>
       <section className="banner" id="home">
         <Container className="banner__container">
-          <Row className="align-items-center banner__items ">
-            <Col xs={12} md={6} xl={7}>
+          <Row className="align-items-center banner__items">
+            <Col className="banner__col1" md={6}>
               <span style={{ color: "#fff" }}>I am</span>
               <h1 className="tagline">DAPO OBEMBE</h1>
               <h2>
@@ -43,7 +43,7 @@ function Banner() {
                 Let's Connect <BsArrowRightCircle size={25} />
               </button>
             </Col>
-            <Col xs={12} md={6} xl={5} className="banner__col2">
+            <Col md={6} className="banner__col2">
               <img
                 src={heroImg}
                 alt="hero image"

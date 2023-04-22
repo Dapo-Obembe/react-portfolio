@@ -39,11 +39,11 @@ export default function Contact() {
               style={{ borderRadius: "0.5rem" }}
             />
           </Col>
-          <Col md={6} className="form__container">
+          <Col md={6} className="form__wrapper">
             <h2>Get In Touch</h2>
             <form onSubmit={handleSubmit}>
               <Row>
-                <Col sm={6} className="px-1">
+                <Col sm={6} className="mb-1">
                   <input
                     type="text"
                     value={formDetails.firstName}
@@ -51,7 +51,7 @@ export default function Contact() {
                     onChange={(e) => onFormUpdate("firstName", e.target.value)}
                   />
                 </Col>
-                <Col sm={6} className="px-1">
+                <Col sm={6} className="mb-1">
                   <input
                     type="text"
                     value={formDetails.lastName}
@@ -62,7 +62,7 @@ export default function Contact() {
               </Row>
 
               <Row>
-                <Col sm={6} className="px-1">
+                <Col sm={6} className="mb-1">
                   <input
                     type="email"
                     value={formDetails.email}
@@ -70,7 +70,7 @@ export default function Contact() {
                     onChange={(e) => onFormUpdate("email", e.target.value)}
                   />
                 </Col>
-                <Col sm={6} className="px-1">
+                <Col sm={6} className="mb-1">
                   <input
                     type="tel"
                     value={formDetails.phone}
@@ -81,7 +81,7 @@ export default function Contact() {
               </Row>
 
               <Row>
-                <Col className="px-1">
+                <Col className="mb-1">
                   <textarea
                     row="6"
                     column="10"
