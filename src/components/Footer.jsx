@@ -5,7 +5,7 @@ import logo from "../assets/images/logo-white.png";
 export default function Footer() {
   return (
     <>
-      <section className="footer text-center" style={{ minHeight: "200px" }}>
+      <section className="footer text-center " style={{ minHeight: "100px" }}>
         <Container>
           <Row>
             <Col className="align-items-center">
@@ -18,7 +18,10 @@ export default function Footer() {
                 }}
                 alt="Dapo Obembe logo"
               />
-              <p className="text-white">
+              <p
+                className="text-white"
+                style={{ fontSize: "clamp(0.8rem, 3vw, 1rem" }}
+              >
                 Copyright 2023 Dapo Obembe - Web Developer in Nigeria
               </p>
             </Col>
