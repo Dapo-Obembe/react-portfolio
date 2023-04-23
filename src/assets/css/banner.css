@@ -62,6 +62,7 @@
 
 .banner p {
   color: var(--white-text);
+  font-size: clamp(12px, 3vw, 16px);
   padding-right: 4rem;
   width: auto;
 }

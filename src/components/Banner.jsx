@@ -39,8 +39,10 @@ function Banner() {
                 Africa. I'd love to join your business's technical team or work
                 on your website.
               </p>
-              <button onClick={() => console.log("connect")}>
-                Let's Connect <BsArrowRightCircle size={25} />
+              <button>
+                <a href="#contact">
+                  Let's Connect <BsArrowRightCircle size={25} />
+                </a>
               </button>
             </Col>
             <Col md={6} className="banner__col2">

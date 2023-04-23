@@ -1,10 +1,10 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 
 import logo from "../assets/images/logo-white.png";
-import { BsFacebook, BsTwitter, BsGithub } from "react-icons/bs";
+import { BsFacebook, BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs";
 import "../assets/css/navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -75,18 +75,17 @@ function NavBar() {
                 <a href="#">
                   <BsTwitter />
                 </a>
-                <a href="#">
+                <a href="https://github.com/Dapo-Obembe">
                   <BsGithub />
                 </a>
-                <a href="#">
-                  <BsFacebook />
+                <a href="https://linkedin.com/in/dapo-obembe">
+                  <BsLinkedin />
                 </a>
               </div>
-              <button
-                className="contact"
-                onClick={() => console.log("connect with me")}
-              >
-                <span>Let's Connect</span>
+              <button className="contact">
+                <a href="#contact" style={{ color: "#fff" }}>
+                  Let's Connect
+                </a>
               </button>
             </span>
           </Navbar.Collapse>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../assets/css/contact.css";
 import ContactImg from "../assets/images/contact-me.webp";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const formInitialDetails = {
@@ -25,7 +26,42 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setButtonText("Sending...");
+
+    const templateParams = {
+      from_name: formDetails.firstName + " " + formDetails.lastName,
+      from_email: formDetails.email,
+      phone_number: formDetails.phone,
+      message_html: formDetails.message,
+    };
+
+    emailjs
+      .send(
+        "service_xe9kihy",
+        "template_cmo3mlv",
+        templateParams,
+        "xtE8CXjbvSXvfmEYW"
+      )
+      .then(
+        function (response) {
+          setStatus({
+            success: true,
+            message: "Message sent successfully!",
+          });
+          setButtonText("Sent");
+          setFormDetails(formInitialDetails);
+        },
+        function (error) {
+          setStatus({
+            success: false,
+            message: "Message failed to send. Please try again later.",
+          });
+          setButtonText("Failed");
+        }
+      );
+  };
 
   return (
     <section className="contact__section" id="contact">
@@ -49,6 +85,7 @@ export default function Contact() {
                     value={formDetails.firstName}
                     placeholder="First Name"
                     onChange={(e) => onFormUpdate("firstName", e.target.value)}
+                    required
                   />
                 </Col>
                 <Col sm={6} className="mb-1">
@@ -57,6 +94,7 @@ export default function Contact() {
                     value={formDetails.lastName}
                     placeholder="Last Name"
                     onChange={(e) => onFormUpdate("lastName", e.target.value)}
+                    required
                   />
                 </Col>
               </Row>
@@ -68,6 +106,7 @@ export default function Contact() {
                     value={formDetails.email}
                     placeholder="Email"
                     onChange={(e) => onFormUpdate("email", e.target.value)}
+                    required
                   />
                 </Col>
                 <Col sm={6} className="mb-1">
@@ -76,6 +115,7 @@ export default function Contact() {
                     value={formDetails.phone}
                     placeholder="Phone Number"
                     onChange={(e) => onFormUpdate("phone", e.target.value)}
+                    required
                   />
                 </Col>
               </Row>
@@ -88,23 +128,22 @@ export default function Contact() {
                     value={formDetails.message}
                     placeholder="Message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
+                    required
                   ></textarea>
                   <button type="submit">
                     <span>{buttonText}</span>
                   </button>
                 </Col>
-                {status.message && (
-                  <Col>
-                    <p
-                      className={
-                        status.success === false ? "danger" : "success"
-                      }
-                    >
-                      {status.message}
-                    </p>
-                  </Col>
-                )}
               </Row>
+              {status.message && (
+                <Col>
+                  <p
+                    className={status.success === false ? "danger" : "success"}
+                  >
+                    {status.message}
+                  </p>
+                </Col>
+              )}
             </form>
           </Col>
         </Row>
