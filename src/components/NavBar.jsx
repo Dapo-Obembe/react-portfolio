@@ -79,7 +79,7 @@ function NavBar() {
                   <BsGithub />
                 </a>
                 <a href="https://linkedin.com/in/dapo-obembe">
-                  <BsLinkedin />
+                  <BsLinkedin size={25} />
                 </a>
               </div>
               <button className="contact">
